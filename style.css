@@ -1,0 +1,386 @@
+:root {
+  --clr-primary-900: hsl(243, 87%, 12%);
+  --clr-primary-700: hsl(240, 16%, 49%);
+
+  --clr-accent-blue: hsl(224, 93%, 58%);
+  --clr-accent-cyan: hsl(170, 45%, 43%);
+
+  --clr-neutral-200: #f8f8fe;
+
+  --clr-neutral-300: hsl(0, 0%, 75%);
+
+  --fw-regular: 400;
+  --fw-semibold: 700;
+
+  --ff-base: "Open Sans", sans-serif;
+  --ff-accent: "Raleway", sans-serif;
+}
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+    2. Remove default margin
+  */
+* {
+  margin: 0;
+}
+/*
+    3. Allow percentage-based heights in the application
+  */
+html {
+  min-height: 100%;
+  width: 100%;
+}
+body {
+  min-height: 100%;
+}
+/*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+    6. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+    7. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+    8. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* Hiding class, making content visible only to screen readers but not visually */
+/* "sr" meaning "screen-reader" */
+.sr-only:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+body {
+  color: var(--clr-primary-900);
+  font-weight: var(--fw-regular);
+  font-size: 1rem;
+  font-family: var(--ff-base);
+  background-color: white;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+header,
+.info-1,
+.info-2 {
+  padding: 3rem;
+}
+
+.flex {
+  display: flex;
+}
+
+.accent {
+  font-family: var(--ff-accent);
+}
+
+header {
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8rem;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 3rem;
+  margin-bottom: 3rem;
+}
+
+h2 {
+  text-align: center;
+  font-family: var(--ff-accent);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+p {
+  font-size: 1.75rem;
+}
+
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: var(--clr-neutral-300);
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: var(--clr-neutral-300);
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: var(--clr-neutral-300);
+}
+
+.btn {
+  width: 100%;
+  background-color: var(--clr-accent-blue);
+  color: white;
+  border: none;
+  font-weight: var(--fw-semibold);
+  padding-block: 0.75em;
+  border-radius: 0.25rem;
+  max-height: 5rem;
+}
+
+.nav-list {
+  padding: 0;
+  list-style-type: none;
+  gap: 2.5rem;
+}
+
+.nav-item {
+  font-size: 1.4rem;
+  color: var(--clr-primary-900);
+  text-decoration: none;
+}
+
+.info-1 {
+  text-align: center;
+  display: grid;
+  justify-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.info-1 p {
+  padding-inline: 1rem;
+  margin-bottom: 3.5rem;
+}
+
+.info-1 form {
+  width: calc(100% - 6rem);
+}
+
+.info-1 input[type="email"] {
+  font-size: 1.35rem;
+  height: 5rem;
+  border: 1px solid var(--clr-primary-900);
+  padding-inline: 2rem;
+  margin-bottom: 2rem;
+}
+
+.info-1 input[type="email"],
+.info-3 input[type="email"] {
+  border-radius: 0.25rem;
+  width: 100%;
+}
+
+.info-3 input[type="email"] {
+  font-size: 1.25rem;
+  padding-block: 1rem;
+  padding-inline: 0.75rem;
+  border: none;
+}
+
+.info-1 .btn {
+  font-size: 1.5rem;
+  box-shadow: 3px 4px 5px 1px rgba(0, 0, 0, 0.137);
+}
+
+.info-3 .btn {
+  margin-top: 1rem;
+  font-size: 1.25rem;
+}
+
+.info-1 > img {
+  order: -1;
+  margin-block: 6rem;
+}
+
+.info-2 {
+  display: grid;
+  background-color: var(--clr-neutral-200);
+  padding-bottom: 9rem;
+}
+
+.info-2__curve {
+  margin-top: 8rem;
+}
+
+.info-2__curve > img {
+  width: 100%;
+}
+
+.info-2 > p {
+  color: var(--clr-primary-700);
+  margin-top: 2rem;
+}
+
+p.link-about-container {
+  justify-self: center;
+  border-bottom: 2px solid var(--clr-accent-cyan);
+  padding-bottom: 0.5rem;
+  width: max-content;
+  margin-block: 4rem;
+}
+
+.link-about {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+
+  text-decoration: none;
+  color: var(--clr-accent-cyan);
+  font-size: 1.5rem;
+}
+
+.card {
+  border-radius: 0.5rem;
+  background-color: white;
+  -webkit-box-shadow: 0 0 10px 5px rgba(58, 58, 58, 0.068);
+  box-shadow: 0 0 10px 5px rgba(54, 54, 54, 0.089);
+  padding: 3rem;
+  margin-inline: 3rem;
+  margin-block: 1rem;
+  font-size: 1rem;
+  display: grid;
+  row-gap: 1rem;
+  line-height: 2;
+}
+.card p {
+  font-size: 1.25rem;
+  color: var(--clr-primary-900);
+}
+
+.author {
+  margin-top: 0.5rem;
+  align-items: center;
+  gap: 1rem;
+}
+
+.author__name {
+  font-weight: var(--fw-semibold);
+  letter-spacing: 0.1rem;
+  line-height: 1.5;
+}
+
+.author__job {
+  font-size: 0.75rem;
+}
+
+img.avatar {
+  width: 50px;
+  border-radius: 50%;
+}
+
+.info-2 > img {
+  order: -1;
+  margin-bottom: 12rem;
+}
+
+.info-3 {
+  background-color: var(--clr-primary-700);
+  color: white;
+  text-align: center;
+
+  padding-top: 6rem;
+  padding-bottom: 8rem;
+  padding-inline: 4rem;
+
+  line-height: 1.4;
+}
+
+.info-3 > h2 {
+  font-size: 2.125rem;
+}
+
+.info-3 > form {
+  margin-top: 2.5rem;
+  margin-inline: 5rem;
+}
+
+.info-3 > form > * {
+  box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.315);
+}
+
+.info-3 input[type="email"] {
+  width: 100%;
+}
+
+footer {
+  background-color: var(--clr-primary-900);
+  color: white;
+  padding-top: 6rem;
+  padding-bottom: 3rem;
+  padding-inline: 4rem;
+  width: 100%;
+}
+
+footer > .link-list > ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+footer > img {
+  width: 55%;
+}
+
+.link-list {
+  font-size: 2rem;
+}
+
+.link-list > * {
+  margin-top: 4rem;
+}
+
+.link-list ul > * + * {
+  margin-top: 1.5rem;
+}
+
+footer > .link-list a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.link-with-icon {
+  align-items: center;
+}
