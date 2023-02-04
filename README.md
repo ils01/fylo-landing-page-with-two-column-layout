@@ -1,4 +1,4 @@
-# [Frontend Mentor - Fylo landing page with two column layout solution](https://ils01.github.io//fylo-landing-page-with-two-column-layout)
+# [Frontend Mentor - Fylo landing page with two column layout solution](https://ils01.github.io/fylo-landing-page-with-two-column-layout)
 
 ![](./preview.png)
 
