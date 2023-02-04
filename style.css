@@ -113,6 +113,11 @@ header,
   padding: 3rem;
 }
 
+button:hover,
+.link-about:hover {
+  opacity: 0.8;
+}
+
 .flex {
   display: flex;
 }
@@ -206,6 +211,12 @@ p {
   width: calc(100% - 6rem);
 }
 
+.info-1 input[type="email"],
+.info-3 input[type="email"] {
+  border-radius: 0.25rem;
+  width: 100%;
+}
+
 .info-1 input[type="email"] {
   font-size: 1.35rem;
   height: 5rem;
@@ -214,10 +225,10 @@ p {
   margin-bottom: 2rem;
 }
 
-.info-1 input[type="email"],
-.info-3 input[type="email"] {
-  border-radius: 0.25rem;
-  width: 100%;
+.info-1 input[type="email"]:not(:focus):not(:placeholder-shown):invalid,
+.info-3 input[type="email"]:not(:focus):not(:placeholder-shown):invalid {
+  outline-color: transparent;
+  border: 1px solid red;
 }
 
 .info-3 input[type="email"] {
@@ -370,6 +381,10 @@ footer > img {
   width: 55%;
 }
 
+footer li:has(a):hover {
+  color: rgb(79, 79, 235);
+}
+
 .link-list {
   font-size: 2rem;
 }
@@ -400,7 +415,7 @@ footer > .link-list a {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 1.5rem;
+  gap: 2rem;
 }
 
 .socialmedia-links > li {
@@ -410,11 +425,20 @@ footer > .link-list a {
 .socialmedia-icon-container {
   border: 1px solid white;
   border-radius: 50%;
-  padding: 0.75em;
+  padding: 0.5em;
+}
+
+.socialmedia-icon-container:hover {
+  border-color: rgb(79, 79, 235);
 }
 
 .socialmedia-icon {
-  width: 25px;
+  width: 26px;
+  height: 26px;
+}
+
+svg.socialmedia-icon:hover {
+  fill: rgb(79, 79, 235);
 }
 
 @media (max-width: 600px) {
@@ -436,6 +460,12 @@ footer > .link-list a {
   }
   header {
     margin: 0;
+  }
+  .nav-list {
+    gap: 3rem;
+  }
+  .nav-item {
+    font-size: 1rem;
   }
   p {
     font-size: 1.25rem;
@@ -601,12 +631,13 @@ footer > .link-list a {
   .socialmedia-links {
     gap: 1rem;
   }
-  .socialmedia-icon {
-    width: 18px;
-  }
   .socialmedia-icon-container {
     border: 1px solid white;
     border-radius: 50%;
     padding: 0.58em;
+  }
+  .socialmedia-icon {
+    width: 17px;
+    height: 17px;
   }
 }
